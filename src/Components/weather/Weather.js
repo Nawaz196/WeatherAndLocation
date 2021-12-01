@@ -124,7 +124,7 @@ function Weather() {
                   nextDay.setDate(new Date().getDate() + c);
 
                   let ans = `${
-                    days[nextDay.getDay() - 1]
+                    days[nextDay.getDay() - 1 > 0 ? nextDay.getDay() - 1 : 6]
                   }, ${nextDay.getDate()}  ${months[nextDay.getMonth()]},  `;
 
                   return ans;
